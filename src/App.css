@@ -42,16 +42,38 @@
     transform: translateY(0);
   }
 }
-
-/* Utility classes */
 .animate-fadeUp {
   animation: fadeUp 0.8s ease-out forwards;
 }
 
+/* Utility classes */
 .delay-200 {
   animation-delay: 0.2s;
 }
-
 .delay-500 {
   animation-delay: 0.5s;
+}
+
+/* Gradient Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient {
+  background: linear-gradient(
+    270deg,
+    #a3dc9a,
+    #dee791,
+    #fff9bd,
+    #ffd6ba
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
 }

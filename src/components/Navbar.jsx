@@ -21,8 +21,8 @@ const Navbar = () => {
     <div>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled ? "bg-[#A3DC9A] shadow-lg py-2" : "bg-[#A3DC9A] py-4"
-        } animate-navbarLoad`}
+          scrolled ? "py-2 shadow-lg" : "py-4"
+        } animate-navbarLoad animate-gradient`}
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6">
           {/* Logo */}
@@ -68,9 +68,7 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <div
-            className={`${
-              menuOpen ? "block" : "hidden"
-            } w-full md:block md:w-auto`}
+            className={`${menuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
             id="navbar-default"
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-black/10 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:bg-transparent">
@@ -92,7 +90,7 @@ const Navbar = () => {
                       <span className="relative z-10 group-hover:text-white transition-colors duration-300">
                         {item}
                       </span>
-                      {/* Animated Background */}
+                      {/* Animated Hover Background */}
                       <span className="absolute left-0 bottom-0 w-full h-0 bg-[#FFD6BA] transition-all duration-300 group-hover:h-[140%] rounded-md"></span>
                     </a>
                   </li>
